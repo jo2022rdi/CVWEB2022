@@ -1,0 +1,101 @@
+
+*{
+    margin: 0px; 
+    padding: 0px;  
+}
+
+html{
+    font-family: sans-serif;
+}
+
+header{
+    margin: 10px;
+    margin-top: 50px;
+}
+
+h1{
+    text-shadow: 2px 2px 2px white;
+}
+
+body{
+    
+    text-align: center;
+    background-color:white;
+}
+
+ /*fondo general*/
+
+#fondo{
+    border-radius: 0;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/*foto personal*/
+
+img{
+    margin-top: 25px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    
+   }
+
+/*Desplegable*/
+
+.main-container{
+    
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.btn-item {
+    background: darkcyan;
+    display: block;
+    color: white;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 25px;
+    text-shadow: 2px 2px 2px blue;
+    border-bottom: 3px solid rgba(166, 167, 166, 0.5);
+    border-radius: 5px;
+}
+
+.item-content{
+    background-color: cyan;
+    overflow: hidden;
+    max-height: 0px;
+    text-align: left;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.2s ease-in-out
+}
+
+.active + .item-content{
+    max-height: 1000px;
+    padding: 10px;
+    opacity: 1;
+}
+
+.btn-item.active{
+    
+    background: rgb(3, 59, 133);
+}
+
+/*Iconos de abrir y cerrar*/
+
+.btn-item:after{
+    content: '\002b';
+    float:right
+}
+
+.btn-item.active:after{
+    content: '\02212';
+}
